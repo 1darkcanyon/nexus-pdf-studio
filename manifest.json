@@ -1,0 +1,27 @@
+{
+  "name": "NEXUS PDF Studio Pro",
+  "short_name": "NEXUS PDF",
+  "description": "Professional PDF editor with text engine, layer locking, templates, signatures and animations — by NEXUS Integrated Intelligence Solutions",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#03030b",
+  "theme_color": "#00e5ff",
+  "lang": "en",
+  "categories": ["productivity", "utilities"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "New Document",
+      "short_name": "New Doc",
+      "description": "Start editing a new PDF",
+      "url": "/",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
