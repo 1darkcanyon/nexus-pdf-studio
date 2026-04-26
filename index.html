@@ -143,10 +143,10 @@ body{background:var(--bg);color:var(--text);font-family:'Rajdhani',sans-serif;di
   position:fixed;
   z-index:401;
   background:#0a0a1c;
-  border:2px solid rgba(220,30,30,.7);
+  border:2px solid rgba(123,47,255,.8);
   border-radius:8px;
   padding:10px 12px;
-  box-shadow:0 0 24px rgba(220,30,30,.3),0 8px 30px rgba(0,0,0,.9);
+  box-shadow:0 0 24px rgba(123,47,255,.4),0 8px 30px rgba(0,0,0,.9);
   gap:8px;
   flex-direction:column;
   min-width:200px;
@@ -156,8 +156,8 @@ body{background:var(--bg);color:var(--text);font-family:'Rajdhani',sans-serif;di
 .wc-sub{font-family:'IBM Plex Mono',monospace;font-size:7px;letter-spacing:1px;color:var(--dim);text-align:center;margin-top:-4px;}
 .wc-row{display:flex;gap:6px;}
 .wc-btn{flex:1;padding:8px 6px;border-radius:4px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:1px;cursor:pointer;border:1px solid var(--b2);background:transparent;color:var(--dim);transition:all .13s;text-align:center;}
-.wc-btn.apply{border-color:rgba(220,30,30,.6);color:#fff;background:rgba(220,30,30,.2);font-weight:700;}
-.wc-btn.apply:hover{background:rgba(220,30,30,.4);}
+.wc-btn.apply{border-color:rgba(123,47,255,.7);color:#fff;background:rgba(123,47,255,.3);font-weight:700;}
+.wc-btn.apply:hover{background:rgba(123,47,255,.55);}
 .wc-btn.cancel{border-color:var(--b2);color:var(--dim);}
 .wc-btn.cancel:hover{border-color:var(--cyan);color:var(--cyan);}
 
@@ -846,17 +846,17 @@ function draw(now){
   if(tool==='wo'&&woRect&&woRect.w>4&&woRect.h>4){
     aCtx.save();
     // White fill preview — shows exactly what will be covered
-    aCtx.fillStyle='rgba(255,255,255,0.82)';
+    aCtx.fillStyle='rgba(123,47,255,0.35)';
     aCtx.fillRect(woRect.x,woRect.y,woRect.w,woRect.h);
     // Red dashed border so box is clearly visible
-    aCtx.strokeStyle='rgba(220,30,30,0.9)';
+    aCtx.strokeStyle='rgba(180,100,255,0.95)';
     aCtx.lineWidth=2;
     aCtx.setLineDash([7,4]);
     aCtx.strokeRect(woRect.x+1,woRect.y+1,woRect.w-2,woRect.h-2);
     aCtx.setLineDash([]);
     // Label inside box if big enough
     if(woRect.w>80&&woRect.h>22){
-      aCtx.fillStyle='rgba(180,0,0,0.85)';
+      aCtx.fillStyle='rgba(220,180,255,0.95)';
       aCtx.font='bold '+Math.min(13,woRect.h*.4)+'px IBM Plex Mono, monospace';
       aCtx.textAlign='center';
       aCtx.textBaseline='middle';
